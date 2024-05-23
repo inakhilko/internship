@@ -56,13 +56,11 @@
 }
 
 .channel-name {
+  display: none;
+
   font-size: 1rem;
   font-weight: 700;
   color: var(--dark-name);
-}
-
-.channel-name {
-  display: none;
 }
 
 .header__controls-wrapper {
