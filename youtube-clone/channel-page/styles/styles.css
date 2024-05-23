@@ -108,6 +108,10 @@
   position: relative;
 }
 
+.header__controls-btn svg path {
+  transition:  fill 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
 .header__controls-btn:hover svg path {
   opacity: 1;
   fill: var(--hover-color);
@@ -188,25 +192,34 @@
   color: var(--navigation-links);
   font-size: 1rem;
   font-weight: 400;
+
+  transition:  color 0.5s ease-in-out ;
+}
+
+.navigation__link svg path {
+  fill: currentColor;
+  transition:  fill 0.5s ease-in-out, opacity .5s ease-in-out;
+}
+
+.navigation__link:hover svg path {
+  opacity: 1;
+}
+
+.navigation__link:active svg path {
+  opacity: 1;
 }
 
 .navigation__link:hover {
   color: rgba(255, 0, 0, 1);
 }
 
-.navigation__link:hover svg path {
-  opacity: 1;
-  fill: var(--hover-color);
-}
+
 
 .navigation__link:active {
   color: var(--active-color);
 }
 
-.navigation__link:active svg path {
-  opacity: 1;
-  fill: var(--active-color);
-}
+
 
 /* subscribers */
 .subscriptions {
@@ -231,6 +244,7 @@
   color: var(--navigation-links);
   font-size: 1rem;
   font-weight: 400;
+  transition:  color 0.2s ease-in-out ;
 }
 
 .subscriptions__link:hover {
@@ -269,6 +283,7 @@
   color: var(--dark-name);
   font-weight: 700;
   font-size: 1.625rem;
+  transition: color 0.3s ease-in-out;
 }
 
 .channel-info__description {
@@ -294,6 +309,12 @@
   font-size: 1rem;
   font-weight: 400;
   background-color: var(--hover-color);
+  transition: background-color .3s ease-in-out;
+}
+
+
+.channel-info__subscriptions:hover {
+  background-color: var(--active-color);
 }
 
 .channel__controls-buttons {
@@ -343,6 +364,7 @@
   color: var(--dark-name);
   font-size: 1rem;
   font-weight: 700;
+  transition: color 0.2s ease-in-out;
 }
 
 .video-list__item-name:hover {
@@ -450,17 +472,18 @@
   justify-content: space-between;
 }
 
-.tabs__button {
+.tabs__controls-button {
   padding: 3px 4px;
   border-bottom: 2px solid transparent;
+  transition: border-bottom 300ms;
 }
 
-.tabs__button:hover {
+.tabs__controls-button:hover {
   border-bottom: 2px solid var(--hover-color);
   color: var(--hover-color);
 }
 
-.tabs__button:last-child {
+.tabs__controls-item:last-child {
   display: none;
 }
 
@@ -500,6 +523,11 @@
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--dark-name);
+  transition: color 0.2s ease-in-out;
+}
+
+.recommendations__name:hover {
+  color: var(--additional-text);
 }
 
 /* home-tab */

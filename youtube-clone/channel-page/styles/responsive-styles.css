@@ -201,15 +201,11 @@
     margin-bottom: 0;
   }
 
-  .tabs__button:not(:nth-child(-n + 3)) {
+  .tabs__controls-item:not(:nth-child(-n + 3)) {
     display: none;
   }
 
-  .tabs__button--more {
-    display: block;
-  }
-
-  .tabs__button:last-child {
+  .tabs__controls-item:last-child {
     display: block;
   }
 
