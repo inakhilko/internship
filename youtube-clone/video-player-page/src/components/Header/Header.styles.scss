@@ -1,0 +1,93 @@
+@import "../../styles/constants.styles";
+
+.header {
+  padding: 20px 70px 30px 32px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__burger-block {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex: 1;
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  .home-link {
+    margin-right: 60px;
+    font-size: 0;
+  }
+
+  .logo {
+    width: 116px;
+    height: 25px;
+  }
+
+  .header__controls-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    flex: 5;
+  }
+
+  .header__controls {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    &-btn {
+      position: relative;
+
+      & svg path {
+        transition: fill 0.2s ease-in-out, opacity 0.2s ease-in-out;
+      }
+
+      &:hover svg path {
+        opacity: 1;
+        fill: $hover-color;
+      }
+      &:active svg path {
+        opacity: 1;
+        fill: $active-color;
+      }
+
+      &--mobile {
+        @media (max-width: 1024px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .notification-number {
+    padding: 2px 5px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background-color: $hover-color;
+  }
+
+  .full-menu {
+    display: none;
+
+    @media (max-width: 1024px) {
+      display: block;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 12px 16px 22px;
+  }
+}

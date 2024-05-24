@@ -1,0 +1,58 @@
+@import "../../styles/constants.styles";
+
+.navigation {
+  display: none;
+
+  @media (max-width: 1024px) {
+    display: block;
+    width: 100%;
+    padding: 12px 24px;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+
+    background-color: #fff;
+
+    &__main-block {
+      display: flex;
+      justify-content: space-between;
+      gap: 29px;
+    }
+
+    &__link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+
+      color: $navigation-links;
+      font-size: 1rem;
+      font-weight: 400;
+
+      transition: color 0.5s ease-in-out;
+
+      & svg path {
+        fill: currentColor;
+        transition: fill 0.5s ease-in-out, opacity 0.5s ease-in-out;
+      }
+
+      &:hover svg path {
+        opacity: 1;
+      }
+
+      &:active svg path {
+        opacity: 1;
+      }
+
+      &:hover {
+        color: rgba(255, 0, 0, 1);
+      }
+
+      &:active {
+        color: $active-color;
+      }
+    }
+  }
+}

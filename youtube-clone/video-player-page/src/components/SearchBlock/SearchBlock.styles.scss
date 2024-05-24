@@ -1,0 +1,43 @@
+@import "../../styles/constants.styles";
+
+.search {
+  position: relative;
+  flex: 1;
+  max-width: 830px;
+
+  &-bar {
+    width: 100%;
+    padding: 12px 23px;
+    border: none;
+    border-radius: 22px;
+
+    background-color: $light-grey-bg;
+
+    &::placeholder {
+      color: rgba(48, 56, 76, 0.4);
+    }
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &-btn {
+    display: flex;
+
+    position: absolute;
+    top: 13px;
+    right: 17px;
+
+    @media (max-width: 1024px) {
+      position: relative;
+      top: unset;
+      right: unset;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

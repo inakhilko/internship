@@ -1,0 +1,114 @@
+@import "../../styles/constants.styles";
+.video {
+  margin-bottom: 38px;
+  border-bottom: solid 1px rgba(216, 216, 216, 0.5);
+
+  flex: 4;
+
+  &__info-block {
+    @media (max-width: 1024px) {
+      padding: 13px 16px 30px;
+    }
+  }
+
+  &__name-block {
+    width: 100%;
+    margin-bottom: 14px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__drop-button {
+    display: none;
+
+    @media (max-width: 1024px) {
+      display: block;
+    }
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: #192646;
+
+    @media (max-width: 1024px) {
+      margin-bottom: 4px;
+
+      font-size: 1.25rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+
+    &-additional {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+
+      &-block {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .more-button {
+        display: flex;
+        align-items: center;
+      }
+
+      @media (max-width: 1024px) {
+        width: 100%;
+        gap: 10px;
+        justify-content: space-between;
+        overflow-x: scroll;
+      }
+    }
+
+    &-button {
+      padding: 10px 20px;
+
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      border-radius: 20px;
+      background-color: $light-grey-bg;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #CECDCDFF;
+      }
+
+      &:active {
+        background-color: #CECDCDFF;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__views {
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: $additional-text;
+
+    @media (max-width: 1024px) {
+      margin-bottom: 20px;
+
+      font-size: 0.75rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    margin-bottom: 0;
+  }
+}

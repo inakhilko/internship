@@ -1,0 +1,65 @@
+@import '../../styles/constants.styles';
+
+.switch {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-weight: 700;
+  font-size: 1rem;
+  color: $dark-name;
+  text-transform: uppercase;
+
+  & input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.625rem;
+  }
+}
+
+.slider {
+  width: 32px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $light-grey-bg;
+  transition: 0.4s;
+
+  &:before {
+    position: absolute;
+    content: '';
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+  }
+
+  &.round {
+    border-radius: 10px;
+
+    &:before {
+      border-radius: 50%;
+    }
+  }
+}
+
+input:checked + .slider:before {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(13px);
+}
+

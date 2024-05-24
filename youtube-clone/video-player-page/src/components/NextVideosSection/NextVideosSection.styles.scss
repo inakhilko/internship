@@ -1,0 +1,36 @@
+@import '../../styles/constants.styles';
+
+.next-videos-section {
+  max-width: 367px;
+
+  &__heading-block {
+    margin-bottom: 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &__heading {
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: $dark-name;
+
+    @media (max-width: 768px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__control {
+    font-weight: 700;
+    font-size: 1rem;
+    color: $dark-name;
+    text-transform: capitalize;
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 16px;
+  }
+}
